@@ -59,6 +59,7 @@ void thermistor_testing_face_activate(movement_settings_t *settings, void *conte
 
 bool thermistor_testing_face_loop(movement_event_t event, movement_settings_t *settings, void *context) {
     (void) context;
+    (void) settings;
     switch (event.event_type) {
         case EVENT_MODE_BUTTON_UP:
             movement_move_to_next_face();

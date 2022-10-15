@@ -79,6 +79,7 @@ void thermistor_logging_face_activate(movement_settings_t *settings, void *conte
 }
 
 bool thermistor_logging_face_loop(movement_event_t event, movement_settings_t *settings, void *context) {
+    (void) settings;
     thermistor_logger_state_t *logger_state = (thermistor_logger_state_t *)context;
     switch (event.event_type) {
         case EVENT_TIMEOUT:

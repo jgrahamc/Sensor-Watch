@@ -51,6 +51,7 @@ void thermistor_readout_face_activate(movement_settings_t *settings, void *conte
 
 bool thermistor_readout_face_loop(movement_event_t event, movement_settings_t *settings, void *context) {
     (void) context;
+    (void) settings;
     watch_date_time date_time = watch_rtc_get_date_time();
     switch (event.event_type) {
         case EVENT_MODE_BUTTON_UP:

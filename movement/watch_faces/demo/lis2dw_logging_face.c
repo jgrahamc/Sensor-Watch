@@ -42,6 +42,8 @@ static void _lis2dw_logging_face_update_display(movement_settings_t *settings, l
     int8_t pos;
     watch_date_time date_time;
 
+    (void) settings;
+    
     if (logger_state->log_ticks) {
         pos = (logger_state->data_points - 1 - logger_state->display_index) % LIS2DW_LOGGING_NUM_DATA_POINTS;
         if (pos < 0) {

@@ -40,6 +40,8 @@ void simple_clock_face_setup(movement_settings_t *settings, uint8_t watch_face_i
 }
 
 void simple_clock_face_activate(movement_settings_t *settings, void *context) {
+    (void) settings;
+    
     simple_clock_state_t *state = (simple_clock_state_t *)context;
 
     if (watch_tick_animation_is_running()) watch_stop_tick_animation();
@@ -58,6 +60,8 @@ bool simple_clock_face_loop(movement_event_t event, movement_settings_t *setting
     char buf[11];
     uint8_t pos;
 
+    (void) settings;
+    
     watch_date_time date_time;
     uint32_t previous_date_time;
     switch (event.event_type) {
