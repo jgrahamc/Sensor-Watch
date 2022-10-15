@@ -50,7 +50,6 @@ void _wake_face_update_display(movement_settings_t *settings, wake_face_state_t 
     uint8_t hour = state->hour;
 
     watch_clear_display();
-    watch_set_indicator(WATCH_INDICATOR_24H);
 
     if ( state->mode )
         watch_set_indicator(WATCH_INDICATOR_BELL);

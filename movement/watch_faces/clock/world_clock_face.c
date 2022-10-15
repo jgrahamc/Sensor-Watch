@@ -60,7 +60,6 @@ static bool world_clock_face_do_display_mode(movement_event_t event, movement_se
     watch_date_time date_time;
     switch (event.event_type) {
         case EVENT_ACTIVATE:
-            watch_set_indicator(WATCH_INDICATOR_24H);
             watch_set_colon();
             state->previous_date_time = 0xFFFFFFFF;
             // fall through

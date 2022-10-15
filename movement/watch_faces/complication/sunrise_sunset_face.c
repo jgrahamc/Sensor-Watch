@@ -85,7 +85,6 @@ static void _sunrise_sunset_face_update(movement_settings_t *settings, sunrise_s
         }
 
         watch_set_colon();
-        watch_set_indicator(WATCH_INDICATOR_24H);
 
         rise += hours_from_utc;
         set += hours_from_utc;

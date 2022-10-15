@@ -46,7 +46,6 @@ void simple_clock_face_activate(movement_settings_t *settings, void *context) {
 
     if (watch_tick_animation_is_running()) watch_stop_tick_animation();
 
-    watch_set_indicator(WATCH_INDICATOR_24H);
     if (state->signal_enabled) watch_set_indicator(WATCH_INDICATOR_SIGNAL);
 
     watch_set_colon();

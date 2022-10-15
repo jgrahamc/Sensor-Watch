@@ -53,7 +53,6 @@ static void _thermistor_logging_face_update_display(thermistor_logger_state_t *l
     } else if (logger_state->ts_ticks) {
         watch_date_time date_time = logger_state->data[pos].timestamp;
         watch_set_colon();
-	watch_set_indicator(WATCH_INDICATOR_24H);
         sprintf(buf, "AT%2d%2d%02d%02d", date_time.unit.day, date_time.unit.hour, date_time.unit.minute, date_time.unit.second);
     } else {
       sprintf(buf, "TL%2d%4.1f#C", logger_state->display_index, logger_state->data[pos].temperature_c);

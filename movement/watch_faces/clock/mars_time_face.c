@@ -100,7 +100,6 @@ static void _update(movement_settings_t *settings, mars_time_state_t *state) {
         _h_to_hms(&mars_time, lmt);
         sprintf(&buf[0], "%s  %02d%02d%02d", site_names[state->current_site], mars_time.hour, mars_time.minute, mars_time.second);
         watch_set_colon();
-        watch_set_indicator(WATCH_INDICATOR_24H);
     }
 
     watch_display_string(buf, 0);
