@@ -54,13 +54,6 @@ typedef union {
         uint8_t led_red_color : 4;          // for general purpose illumination, the red LED value (0-15)
         uint8_t led_green_color : 4;        // for general purpose illumination, the green LED value (0-15)
         uint8_t time_zone : 6;              // an integer representing an index in the time zone table.
-
-        // while Movement itself doesn't implement a clock or display units, it may make sense to include some
-        // global settings for watch faces to check. The 12/24 hour preference could inform a clock or a
-        // time-oriented complication like a sunrise/sunset timer, and a simple locale preference could tell an
-        // altimeter to display feet or meters as easily as it tells a thermometer to display degrees in F or C.
-        bool clock_mode_24h : 1;            // indicates whether clock should use 12 or 24 hour mode.
-        bool use_imperial_units : 1;        // indicates whether to use metric units (the default) or imperial.
         uint8_t reserved : 7;               // room for more preferences if needed.
     } bit;
     uint32_t reg;

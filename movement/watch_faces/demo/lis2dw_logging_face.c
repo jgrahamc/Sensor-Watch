@@ -50,13 +50,7 @@ static void _lis2dw_logging_face_update_display(movement_settings_t *settings, l
         } else {
             date_time = logger_state->data[pos].timestamp;
             watch_set_colon();
-            if (settings->bit.clock_mode_24h) {
-                watch_set_indicator(WATCH_INDICATOR_24H);
-            } else {
-                if (date_time.unit.hour > 11) watch_set_indicator(WATCH_INDICATOR_PM);
-                date_time.unit.hour %= 12;
-                if (date_time.unit.hour == 0) date_time.unit.hour = 12;
-            }
+	    watch_set_indicator(WATCH_INDICATOR_24H);
             switch (logger_state->axis_index) {
                 case 0:
                     sprintf(buf, "3A%2d%02d%4lu", date_time.unit.hour, date_time.unit.minute, logger_state->data[pos].x_interrupts + logger_state->data[pos].y_interrupts + logger_state->data[pos].z_interrupts);
